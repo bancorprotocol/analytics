@@ -4,7 +4,7 @@ import MainDashboard from './components/MainDashboard';
 function App() {
   return (
     <div className="App">
-      <h1>Bancor 3 Dashboard</h1>
+      <h1>Bancor Analytics Dashboard</h1>
       <MainDashboard />
     </div>
   );
