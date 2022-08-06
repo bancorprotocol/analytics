@@ -15,6 +15,8 @@ function MainDashboard() {
         hideToolbar: true,
         hideTabs: true,
         device: device,
+        width: "100vw",
+        height: "100vh",
         onFirstInteractive: function () {
             console.log("Loaded Main Dashboard.");
         },
