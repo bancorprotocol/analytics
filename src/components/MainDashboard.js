@@ -6,6 +6,8 @@ const { tableau } = window;
 function MainDashboard() {
     const ref = useRef(null);
     const url = 'https://public.tableau.com/views/Bancor3PublicDashboard/Bancor3Dashboard';
+    let timezoneOffsetHrs = -(new Date().getTimezoneOffset());
+
     let device = 'desktop';
     if(isMobile) {
         device = 'phone';
@@ -17,8 +19,10 @@ function MainDashboard() {
         device: device,
         width: "100vw",
         height: "100vh",
+        "Timezone_offset": timezoneOffsetHrs,
         onFirstInteractive: function () {
             console.log("Loaded Main Dashboard.");
+            console.log("Time offset from UTC: %d hours", timezoneOffsetHrs);
         },
     };
 
